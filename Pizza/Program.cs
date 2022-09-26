@@ -15,13 +15,19 @@ namespace Pizza
             };
 
             string selection = ChooseFrom(toppings);
+
+            foreach(string item in toppings)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine($"You have chosen {selection}");
         }
 
         private static string ChooseFrom(List<string> options)
         {
+
             Console.WriteLine("Please choose one of the following:");
-            
+            options.Add("Vegan");
 
             // repeat until user input is valid
             bool valid = false;
